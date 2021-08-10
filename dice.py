@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# this is a bad practice but my python install is messed up and I don't wanna fix it
+#!/usr/bin/env python3
 
 
 """
@@ -7,10 +6,13 @@
 """
 
 import secrets
+from sys import argv
 
 pword = ''
+n = 5 if len(argv) == 1 else int(argv[1])
 
-for i in range(5):
+
+for i in range(n):
     res = ''
     for j in range(5):
         res += str(secrets.randbelow(6)+1)
